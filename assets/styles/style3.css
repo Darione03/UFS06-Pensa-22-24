@@ -1,24 +1,6 @@
-footer {
-  background-color: #fff;
-  height: 25vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  top: 32vh;
-  position: relative;
-}
-
-.content-footer {
-  max-width: 80%;
-  text-align: center;
-}
-
-/* stile barra di ricerca */
 .search-container {
   display: flex;
   align-items: center;
-  margin-left: 9vw;
   position: relative;
 }
 
@@ -29,7 +11,6 @@ footer {
   text-align: center;
 }
 
-/* animazione barra di ricerca */
 .search-container input[type="text"]:focus {
 text-align: left;
 
@@ -42,84 +23,57 @@ input:focus::placeholder {
 
 
 
-/* immagine cima */
 .strip {
   width: 100%;
-  height: calc(100vh - 95px);
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.strip1 .background {
-  background-image: url("https://mcusercontent.com/0ae6c31edd502dfa929de19a6/images/68914c75-a15c-1cc4-629c-905f6608fe27.png");
-  background-size:contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.strip1 .content {
-  left: 0;
-  right: 0;
-  padding: 0px;
-  text-align:center;
-  position: relative;
-
-}
-
-.strip1 .text-box {
-  /* background-color: rgb(255 255 255 / 95%); */
+.strip .text-box {
   color: #ffffff;
   border-radius: 12px;
   top: 33vh;
   position: relative;
+  text-align: center;
+  margin-top: 14vh;
 }
-/* END immagine cima */
 
-
-
-
-/* immagine fondo */
-.stripdown {
+.img-bkg-strip {
+  position: absolute;
+  top: 6em;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
   width: 100%;
-  height: calc(100vh - 95px);
+  height: 100%;
+}
+
+.strip2 {
+  width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
-top: 15vh;
+  margin-top: 20vh;
 }
 
-.strip2 .background {
-  background-image: url("https://mcusercontent.com/0ae6c31edd502dfa929de19a6/images/0ff45987-c264-b590-d2d5-87cafa6e8a47.png");
-  background-size:contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.strip2 .content {
-  left: 0;
-  right: 0;
-  padding: 0px;
-  text-align:center;
-  position: relative;
-}
-
-.strip2 .text-box {
-  /* background-color: rgb(255 255 255 / 95%); */
+.strip2 .text-box2  {
   color: #000000;
   border-radius: 12px;
-  top: 6vh;
   position: relative;
+bottom: 85vh;
+text-align: center;
 }
 
+.img-bkg-strip2 {
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position:bottom;
+  width: 100%;
+  height: 100%;
+}
 
-/* END immagine fondo */
 
 
 
@@ -127,10 +81,11 @@ top: 15vh;
 
 .section p, .concert * {
   text-shadow: 1px 1px 15px rgb(0 0 0 / 90%);
+  font-size: 30px;
 }
 
 .section p {
-  max-width: 300px;
+  max-width: 1000px;
 }
 
 .section:after, .concert:after {
@@ -148,39 +103,57 @@ top: 15vh;
 
 
 .section h2 {
-  font-size: 32px;
+  font-size: 60px;
 }
 
-.strip1 h2 {
-  width: 900px;
-  margin: 0 auto;
+.strip h2 {
+ font-size: 40px;
+ margin-top: 0;
 }
 
-.strip1 h3 {
+.strip h3 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 30px;
 }
 
+.strip p {
+  margin-top: 0;
+  font-size: 25px;
+}
 
+.strip2 h2 {
+  margin-top: 0;
+  font-size: 40px;
+}
 
-/* titolone */
-header h1 a {
+.strip2 h3 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.header h1 a {
   text-decoration: none;
-  color: #ffffff; /* Imposta il colore del testo desiderato */
+  color: #ffffff;
 }
 
-/* quadratone header */
-header {
+
+.header {
   display: flex; 
   color: #fff;
   padding: 30px;
   text-decoration: none;
-  /* height: 7vh; */
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+  width: 100%;
+  background-color: #000000;
 }
 
+.sticky{
+position: fixed;
+top: 0;
+z-index: 99;
+}
 
 body, h1, h2, p, ul, li {
   margin: 0;
@@ -188,7 +161,6 @@ body, h1, h2, p, ul, li {
 
 }
 
-/* Stile globale */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -197,32 +169,22 @@ body {
 }
 
 h1 {
-  font-size: 22px;
-  /* top:1.25vh; */
+  font-size: 25px;
   position:relative;
-  /* left: 2vw; */
 }
 
 nav ul {
   list-style: none;
-  /* position:relative; */
-  /* left: 73vw; */
-  /* bottom: 5vh; */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0px;
+  font-size: 20px;
 }
 
 
-
-h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
 
 p {
   margin-bottom: 10px;
@@ -230,7 +192,7 @@ p {
 }
 
 ul li {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .btn {
@@ -245,12 +207,11 @@ ul li {
   background-color: #555;
 }
 
- /* style.css */
 
 ul {
   list-style: none;
   padding: 0;
-  /* margin: 20px; */
+  margin-right: 2em;
 }
 
 ul li {
@@ -261,7 +222,6 @@ ul li {
   cursor: pointer;
 }
 
-/* linea sotto ul */
 
 ul li a:hover::after {
   content: '';
@@ -279,7 +239,6 @@ ul li a:hover::after {
   to { width: 100%; }
 }
 
-/* immagini teatro etc */
 
 .section {
   display: flex;
@@ -287,12 +246,10 @@ ul li a:hover::after {
   padding: 30px;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 800px; /* Riduci la larghezza desiderata */
+  max-width: 800px;
   height: 40vh;
-  margin: 0 auto; /* Centra orizzontalmente */
-  /* top: 0vh; */
+  margin: 0 auto;
   position: relative;
-  /* margin-bottom: 40px; */
   transition: transform 0.3s;
   margin-top: 15vh;
   align-items: center;
@@ -315,62 +272,63 @@ ul li a:hover::after {
 
 .img-bkg {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  top: 0em;
   left: 0;
   object-fit: cover;
+  object-position: center center;
   width: 100%;
   height: 100%;
 }
 
 .section:hover {
-  transform: scale(1.1); /* Espandi il container al passaggio del mouse */
+  transform: scale(1.1);
 }
 
-/* END immagini teatro etc. */
-
-
-
-
-/* CSS concerti */
-
-
-.concert-container {
+.image-container {
   display: flex;
-  justify-content: center;
-  top:500vh;
-  height: calc(100vh - 95px);
-  align-items: center;
-  margin-top: -50px;
-  padding: 4vh;
+  flex-wrap: wrap;
 }
 
-.concert {
-  width: 300px;
-  height: 300px;
-  border: 2px solid #333;
-  margin:  60px;
-  margin-top: 90px;
-  padding: 12px;
-  box-sizing: border-box;
-  text-align: center;
+.image {
   position: relative;
+  width: 33.33%;
+  box-sizing: border-box;
+  margin-top: 5vh;
+  padding: 10px;
+  height: 0;
+  padding-bottom: 33.33%; 
+}
+
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
   display: flex;
   flex-direction: column;
-  color: #fff;
-  align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  overflow: hidden;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.concert img {
-  /* width: 200px; */
-  /* height: 200px; */
-  object-fit: cover;
-  margin-bottom: 10px;
-  z-index: -1;
+.overlay h3,
+.overlay p {
+  margin: 5px;
+  text-align: center;
 }
 
-
+.image:hover .overlay {
+  opacity: 1;
+}
